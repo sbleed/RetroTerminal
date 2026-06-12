@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroTerminal - Vintage Terminal Emulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="terminal-container" class="terminal-container">
+        <div id="scanlines" class="scanlines"></div>
+        <div id="terminal" class="terminal">
+            <div id="output" class="terminal-output"></div>
+            <div class="terminal-input-line">
+                <span class="prompt">C:\&gt;</span>
+                <input 
+                    id="input" 
+                    type="text" 
+                    class="terminal-input" 
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel">
+        <button id="settings-toggle" class="settings-toggle">⚙️</button>
+        <div id="settings-content" class="settings-content hidden">
+            <h3>Customize Theme</h3>
+            <div class="setting-group">
+                <label for="text-color">Text Color:</label>
+                <input type="color" id="text-color" value="#00ff00">
+            </div>
+            <div class="setting-group">
+                <label for="bg-color">Background Color:</label>
+                <input type="color" id="bg-color" value="#000000">
+            </div>
+            <div class="setting-group">
+                <label for="prompt-color">Prompt Color:</label>
+                <input type="color" id="prompt-color" value="#00ff00">
+            </div>
+            <button id="reset-theme" class="reset-btn">Reset to Default</button>
+            <button id="close-settings" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="basic.js"></script>
+    <script src="terminal.js"></script>
+</body>
+</html>
